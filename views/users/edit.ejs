@@ -5,6 +5,20 @@
     <title>photo-go-round_ uedit/DavidEpps.GA</title>
   </head>
   <body>
-  
+  <header>
+  	<h1>Edit <%=user.title%></h1>
+  	<nav>
+  		<ul>
+  			<li><a href="/">Home</a></li>
+  			<li><a href="/users">users Index</a></li>
+  		</ul>
+  	</nav>
+  </header>
+  <main>
+  	<h2>user Details</h2>
+  	<form action="/users/<%=user.id%>?_method="PUT" method="POST">
+  		<input type="text" name="title" value="<%user.title%>"><br><button type="submit">Update Details</button>
+  	</form>
+  </main>
   </body>
 </html>

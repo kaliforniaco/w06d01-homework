@@ -5,6 +5,25 @@
     <title>photo-go-round_ uindex/DavidEpps.GA</title>
   </head>
   <body>
-  
+  <header>
+  	<h1>Photos</h1>
+  	<nav>
+  		<ul>
+  			<li><a href="/">Home</a></li>
+  			<li><a href="/users/new">Add NEW User</a></li>
+  		</ul>
+  	</nav>
+  </header>
+  <main>
+  	<h2>Directory of Users</h2>
+  	<ul>
+  		<% for(let i = 0;i < users.length; i++){%>
+  		<% console.log(users[i].id) %>
+  		<li><a href="/users/<%=users[i].id%>"><%=users[i].title %></a>
+
+  		<%}%>
+  	</li>
+  </ul>
+</main>
   </body>
 </html>

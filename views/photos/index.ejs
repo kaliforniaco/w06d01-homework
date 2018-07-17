@@ -5,6 +5,25 @@
     <title>photo-go-round_ pindex/DavidEpps.GA</title>
   </head>
   <body>
-  
-  </body>
+  <header>
+  	<h1>Photos</h1>
+  	<nav>
+  		<ul>
+  			<li><a href="/">Home</a></li>
+  			<li><a href="/photos/new">Add NEW Photo</a></li>
+  		</ul>
+  	</nav>
+  </header>
+  <main>
+  	<h2>Directory of Photos</h2>
+  	<ul>
+  		<% for(let i = 0;i < photos.length; i++){%>
+  		<% console.log(photos[i].id) %>
+  		<li><a href="/photos/<%=photos[i].id%>"><%=photos[i].title %></a>
+
+  		<%}%>
+  	</li>
+  </ul>
+</main>
+</body>
 </html>
