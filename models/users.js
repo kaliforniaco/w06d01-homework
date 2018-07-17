@@ -5,7 +5,7 @@ const usersSchema = mongoose.Schema({
 	password: {type: String, required: true},
 	location: String,
 	style: String,
-	posts: [Photos]
+	posts: {type: Number, ref:'Photos'}
 
 	// does PW have to be in a separate file for security?
 	// keep open for authentication conventions <<<
