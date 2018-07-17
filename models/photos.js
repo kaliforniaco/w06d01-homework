@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const photosSchema = mongoose.Schema({
-	title: String,
+	title: {type: String, required: true},
 	description: String,
 	style: String,
 	host: [Users]

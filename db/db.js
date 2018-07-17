@@ -2,15 +2,15 @@ const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/photogoround');
 
-mongoose.connetion.on('connected', () => {
+mongoose.connection.on('connected', () => {
 	console.log('say cheese');
 });
 
-mongoose.connect.on('error', (err) => {
+mongoose.connection.on('error', (err) => {
 	console.log('lenscap is on');
 });
 
-mongoose.connect.on('disconnected', () => {
+mongoose.connection.on('disconnected', () => {
 	console.log('bad exposure');
 });
 

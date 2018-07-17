@@ -1,7 +1,8 @@
-const mongoose = reauire('mongoose');
+const mongoose = require('mongoose');
 
 const usersSchema = mongoose.Schema({
-	username: String,
+	username: {type: String, required: true},
+	password: {type: String, required: true},
 	location: String,
 	style: String,
 	posts: [Photos]
